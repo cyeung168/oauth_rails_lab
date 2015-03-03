@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OauthEx</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<p>
+  <% flash.each do |key, value| %>
+    <%= content_tag :div, value, id: "flash_#{key}" %>
+  <% end %>
+  <%= yield %>
+</p>
+
+</body>
+</html>
